@@ -3,15 +3,12 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
   entry: {
-    mainEntryPoint: path.resolve(__dirname, 'src', 'index.ts'),
+    mainEntryPoint: path.resolve(__dirname, 'src', 'index.tsx'),
   },
 
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
-    compress: true,
     port: 3000,
+    open: true,
   },
 
 
@@ -19,12 +16,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'my-page-title',
       template: path.resolve(__dirname, 'public', 'index.html'),
-      filename: path.resolve(__dirname, 'build/html', 'index.[contenthash].html'),
+      filename: 'index.html',
     })
   ],
 
   output: {
-    filename: '[name].m-bundle.js', // name - entry point name.
+    filename: '[name].bundle.js', // name - entry point name.
     path: path.resolve(__dirname, 'build', ),
     clean: true,
   },
