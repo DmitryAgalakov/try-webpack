@@ -4,7 +4,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "s": "webpack serve --mode=development",
+    "s": "webpack serve --mode=development --config webpack/webpack.config.ts",
     "s-p": "webpack serve --mode=production",
     "d": "webpack --mode=development",
     "p": "webpack --mode=production"
@@ -23,7 +23,12 @@
     "@types/typescript": "2.0.0",
     "@types/webpack": "5.28.5",
     "@types/webpack-dev-server": "4.7.2",
+    "css-loader": "^7.1.2",
     "html-webpack-plugin": "5.6.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.0",
+    "style-loader": "^4.0.0",
     "ts-loader": "9.5.1",
     "ts-node": "10.9.2",
     "typescript": "5.5.3",

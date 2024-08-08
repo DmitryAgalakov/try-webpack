@@ -9,6 +9,7 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    // "noEmit": true // Отключает компиляцию tsc, чтобы ей занимался babel, например.
   },
   "ts-node": {
     "compilerOptions": {
